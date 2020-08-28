@@ -3,7 +3,7 @@ FROM golang:1.13.5-alpine3.10 AS builder
 WORKDIR /build
 #开启go mod proxy
 ENV GOPROXY https://goproxy.io
-#开启go mod
+#开启go mod 可以让项目在GOPATH/src外
 ENV GO111MODULE on
 
 COPY go.mod .
